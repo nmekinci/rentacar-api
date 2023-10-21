@@ -27,3 +27,5 @@ const ReservationSchema = new Schema({
         default: 0
     }
 },{collection: 'reservations', timestamps:true})
+
+module.exports = model('Reservation', ReservationSchema)

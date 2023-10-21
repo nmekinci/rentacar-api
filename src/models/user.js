@@ -31,7 +31,13 @@ const UserSchema = new Schema({
         //! var validator = require("email-validator")
         // validate:[validator.validate("test@email.com")]
     },
-    reservList: {},
+    reservList: [
+        {
+            type:Schema.Types.ObjectId,
+            ref:'Reservation',
+            required:true
+        }
+    ],
     isActive:{
         type:Boolean,
         default: true
@@ -48,4 +54,4 @@ const UserSchema = new Schema({
 
 },{collection:'users', timestamps: true})
 
-module.exports = model.apply('User', UserSchema)
+module.exports = model('User', UserSchema)
