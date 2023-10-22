@@ -24,6 +24,8 @@ require('express-async-errors')
 
 app.use(express.json())
 
+app.use(require('./src/middlewares/findSearchSortPage'))
+
 
 //homepath
 app.all('/', (req,res) => {
