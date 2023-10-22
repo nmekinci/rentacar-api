@@ -18,7 +18,8 @@ require('express-async-errors')
 
 //configurations
 
-
+const {dbConnection} = require('./src/config/dbConnection')
+dbConnection()
 
 //Middlewares
 
