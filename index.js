@@ -41,3 +41,5 @@ app.all('/', (req,res) => {
 app.use(require('./src/middlewares/errorHandler'))
 //server 
 app.listen(PORT, ()=> console.log('http://127.0.0.1:' + PORT) )
+
+// require('./src/helpers/sync')()
