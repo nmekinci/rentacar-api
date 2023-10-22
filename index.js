@@ -37,6 +37,8 @@ app.all('/', (req,res) => {
     })
 })
 
+app.use('/users', require('./src/routes/user'))
+
 //error handler
 app.use(require('./src/middlewares/errorHandler'))
 //server 
