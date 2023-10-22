@@ -1,0 +1,26 @@
+{
+  "name": "rentacar-api",
+  "version": "1.0.0",
+  "description": "- Customers;\r   - can select start and end date and see the list of available cars on selected dates. It is not allowed to choose past dates.\r   - can choose a car on the list and reserve that car, but can not reserve more than one car on a selected time period,\r   - can not reserve cars which are reserved by other customers on selected time period.\r   - can see the list of their reservations including past ones.\r   - can update reservations.\r   - can delete their reservations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmekinci/rentacar-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmekinci/rentacar-api/issues"
+  },
+  "homepage": "https://github.com/nmekinci/rentacar-api#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "mongoose": "^7.6.3"
+  }
+}
