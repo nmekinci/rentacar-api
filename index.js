@@ -36,5 +36,8 @@ app.all('/', (req,res) => {
         user: req.user
     })
 })
+
+//error handler
+app.use(require('./src/middlewares/errorHandler'))
 //server 
 app.listen(PORT, ()=> console.log('http://127.0.0.1:' + PORT) )
