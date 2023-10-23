@@ -2,6 +2,7 @@
 
 //logger with winston
 //npm i winston
+//npm i winston-mongodb
 
 const winston = require("winston");
 

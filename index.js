@@ -30,7 +30,9 @@ app.use(require('./src/middlewares/findSearchSortPage'))
 app.use(require('./src/middlewares/logger'))
 //secondary log with winston
 //npm i winston
-app.use(require('./src/middlewares/loggerWinston'))
+// app.use(require('./src/middlewares/loggerWinston'))
+
+    
 
 
 //homepath
