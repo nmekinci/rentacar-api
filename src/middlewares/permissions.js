@@ -10,7 +10,7 @@
 //     isAdmin : (req,res,next) => {
 //         req.user.isAdmin ? next() : (res.errorStatusCode = 403, throw new Error('NoPermission: You must be an admin'));
 //     }
-}
+
 
 module.exports = {
     isLogin: (req,res,next) => {
