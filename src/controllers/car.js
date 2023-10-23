@@ -32,14 +32,11 @@ module.exports = {
                 in: 'body',
                 required: true,
                 schema: {
-                    "username": "test",
-                    "password": "1234",
-                    "email": "test@site.com",
-                    "reservList":[{"CarId":"...."}]
-                    "isActive": true,
-                    "isStaff": false,
-                    "isAdmin": false,
-                }
+                   "brand" : "tesla",
+                    "model": "x",
+                    "price": 100,
+                    "creatorId": "6536c4f415793f0171589283"
+}
             }
         */
     const data = await Car.create(req.body);

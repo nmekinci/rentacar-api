@@ -42,9 +42,10 @@ app.all('/', (req,res) => {
     })
 })
 //routes
-app.use('/users', require('./src/routes/user'))
-app.use('/reservations', require('./src/routes/reservation'))
-app.use('/cars', require('./src/routes/car'))
+// app.use('/users', require('./src/routes/user'))
+// app.use('/reservations', require('./src/routes/reservation'))
+// app.use('/cars', require('./src/routes/car'))
+app.use(require('./src/routes/index'))
 
 //error handler
 app.use(require('./src/middlewares/errorHandler'))

@@ -35,7 +35,7 @@ module.exports = {
                     "username": "test",
                     "password": "1234",
                     "email": "test@site.com",
-                    "reservList":[{"reservationId":"...."}]
+                    "reservList":[{"reservationId":"...."}],
                     "isActive": true,
                     "isStaff": false,
                     "isAdmin": false,

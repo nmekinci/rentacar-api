@@ -1,9 +1,11 @@
 "use strict"
 
-const {Schema, model} = require('mongoose')
+const {Schema, model, default: mongoose} = require('mongoose')
+const passCrypt = require('../helpers/passwordEncrypt')
 
 const UserSchema = new Schema({
-    userName : {
+    
+    username : {
         type: String,
         trim: true,
         reqired: true,
@@ -13,7 +15,7 @@ const UserSchema = new Schema({
         type:String,
         trim:true,
         required: true,
-        // set: (password) => passEncrypt(password)
+        set: (password) => passCrypt(password)
     },
     email:{
         type:String,
@@ -52,6 +54,6 @@ const UserSchema = new Schema({
     },
 
 
-},{collection:'users', timestamps: true})
+},{collection:'users', timestamps: {createdAt:'createdAt_User', updatedAt:'updatedAt_User'}})
 
 module.exports = model('User', UserSchema)

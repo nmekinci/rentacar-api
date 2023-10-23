@@ -2,7 +2,7 @@
 
 // password encrypt
 
-const crypto = require('node:crypto')
+const crypto = require('node:crypto'),
 keycode = process.env.SECRET_KEY,
 loopCount = 8000,
 charCount = 32,

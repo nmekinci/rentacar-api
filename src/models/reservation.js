@@ -16,11 +16,11 @@ const ReservationSchema = new Schema({
     startDate:{
         type:Date,
         required: true,
-        // default: new Date()
+        default: new Date()
     },
     endDate:{
         type:Date,
-        required: true,
+        required: false,
     },
     totalPrice: {
         type: Number,

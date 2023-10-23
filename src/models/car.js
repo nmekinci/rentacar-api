@@ -14,8 +14,7 @@ const CarSchema = new Schema(
     },
     regPlate: {
       type: String,
-      required: true,
-      unique: true,
+      // unique: true,
     },
     price: {
       type: Number,
@@ -25,8 +24,7 @@ const CarSchema = new Schema(
     occupiedList: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Reservation",
-        required: true,
+        ref: "Reservation"
       },
     ],
     creatorId: {
@@ -36,8 +34,7 @@ const CarSchema = new Schema(
     },
     updaterId: {
       type: Schema.Types.ObjectId,
-      ref: "User",
-      required: true,
+      ref: "User"
     },
   },
   { collection: "cars", timestamps: true }
