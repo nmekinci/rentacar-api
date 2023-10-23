@@ -44,6 +44,7 @@ app.all('/', (req,res) => {
 //routes
 app.use('/users', require('./src/routes/user'))
 app.use('/reservations', require('./src/routes/reservation'))
+app.use('/cars', require('./src/routes/car'))
 
 //error handler
 app.use(require('./src/middlewares/errorHandler'))
