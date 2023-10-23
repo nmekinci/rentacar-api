@@ -24,8 +24,13 @@ dbConnection()
 //Middlewares
 
 app.use(express.json())
-
+//getmodellist
 app.use(require('./src/middlewares/findSearchSortPage'))
+//logger
+app.use(require('./src/middlewares/logger'))
+//secondary log with winston
+//npm i winston
+app.use(require('./src/middlewares/loggerWinston'))
 
 
 //homepath
