@@ -41,8 +41,9 @@ app.all('/', (req,res) => {
         user: req.user
     })
 })
-
+//routes
 app.use('/users', require('./src/routes/user'))
+app.use('/reservations', require('./src/routes/reservation'))
 
 //error handler
 app.use(require('./src/middlewares/errorHandler'))

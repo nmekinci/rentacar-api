@@ -1,16 +1,22 @@
-"use strict"
+"use strict";
 
 //logger with winston
 //npm i winston
 
-const winston = require('winston');
+const winston = require("winston");
 
-// Winston ile loglama ayarları
-module.exports = winston.createLogger({
-  level: 'info',
+// sets for logging with winston 
+const logger = winston.createLogger({
+  level: "info",
   format: winston.format.json(),
   transports: [
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' })
-  ]
+    new winston.transports.File({ filename: "error.log", level: "error" }),
+    new winston.transports.File({ filename: "combined.log" }),
+  ],
 });
+
+module.exports = (req,res,next) => {
+    // logging inside the middleware
+  logger.info(`${req.method} ${req.url}`);
+  next()
+}
