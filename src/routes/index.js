@@ -4,8 +4,7 @@
 
 const router = require('express').Router()
 
-const permissions = require('../middlewares/permissions')
-router.use(permissions.isLogin)
+
 
 router.use('/auth', require('./auth'))
 router.use('/users', require('./user'))

@@ -78,7 +78,7 @@ module.exports = {
                 }
             }
         */
-    const data = await Reservation.updateOne({ _id: req.params.id }, req.body);
+    const data = await Reservation.updateOne({ _id: req.params.id }, req.body,{runValidators:true});
 
     res.status(202).send({
       error: false,
