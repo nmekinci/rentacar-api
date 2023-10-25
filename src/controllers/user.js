@@ -84,7 +84,7 @@ module.exports = {
     res.status(202).send({
       error: false,
       data,
-      newCreatedUser: await User.findOne({ _id: req.params.id }),
+      newUpdatedUser: await User.findOne({ _id: req.params.id }),
     });
   },
   delete: async (req, res) => {
@@ -96,6 +96,7 @@ module.exports = {
     res.status(data.deletedCount ? 204 : 404).send({
       error: !data.deletedCount,
       data,
+      note: data.deletedCount ? "deleted" : "there is no USER record for delete"
     });
   },
 };

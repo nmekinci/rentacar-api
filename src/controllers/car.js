@@ -93,6 +93,7 @@ module.exports = {
     res.status(data.deletedCount ? 204 : 404).send({
       error: !data.deletedCount,
       data,
+      note: data.deletedCount ? "deleted":"there is no CAR record for delete"
     });
   },
 };

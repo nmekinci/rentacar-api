@@ -24,13 +24,16 @@ dbConnection()
 //Middlewares
 
 app.use(express.json())
+//auth
+app.use(require('./src/middlewares/authentication'))
+
 //getmodellist
 app.use(require('./src/middlewares/findSearchSortPage'))
 //logger
 app.use(require('./src/middlewares/logger'))
 //secondary log with winston
 //npm i winston
-// app.use(require('./src/middlewares/loggerWinston'))
+app.use(require('./src/middlewares/loggerWinston'))
 
     
 

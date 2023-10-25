@@ -44,6 +44,7 @@ module.exports = {
     res.status(201).send({
       error: false,
       data,
+
     });
   },
   read: async (req, res) => {
@@ -94,6 +95,7 @@ module.exports = {
     res.status(data.deletedCount ? 204 : 404).send({
       error: !data.deletedCount,
       data,
+      note: data.deletedCount ? "deleted":"there is no RESERVATION record for delete"
     });
   },
 };
