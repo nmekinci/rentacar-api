@@ -16,7 +16,7 @@ module.exports = {
                 </ul>
             `
         */
-    const data = await res.getModelList(Reservation);
+    const data = await res.getModelList(Reservation,{},'creatorId carId');
 
     res.status(200).send({
       error: false,

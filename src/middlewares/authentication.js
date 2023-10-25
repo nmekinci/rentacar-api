@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
   req.isLogin = false;
   req.user = null;
   jwt.verify(tok, process.env.KEY,function (err, userData)  {
-    console.log(userData);
+    // console.log(userData);
     if (userData && userData.isActive) {
       req.isLogin = true;
       req.user = userData;
